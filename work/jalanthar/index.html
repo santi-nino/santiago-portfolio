@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Jalanthar — Santiago Niño</title>
-<meta name="description" content="Three years of campaign management, world-building, and narrative design — plus a custom web app to run it all.">
+<meta name="description" content="Three years of D&D campaign management, world-building, and narrative design — plus a custom web app built to run it.">
 <link rel="canonical" href="https://ageofdust.github.io/work/jalanthar/">
 <meta property="og:title" content="Jalanthar — Santiago Niño">
 <meta property="og:type" content="website">
@@ -14,6 +14,49 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../css/styles.css">
+<style>
+  .jalanthar-embed-wrap {
+    margin-top: 40px;
+    border: 1px solid rgba(43,43,42,0.15);
+    border-radius: 8px;
+    overflow: hidden;
+    background: #1a1a2e;
+  }
+  .jalanthar-embed-bar {
+    background: rgba(43,43,42,0.08);
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid rgba(43,43,42,0.12);
+  }
+  .jalanthar-embed-dots { display: flex; gap: 6px; }
+  .jalanthar-embed-dots span {
+    width: 12px; height: 12px; border-radius: 50%;
+    background: rgba(43,43,42,0.2);
+  }
+  .jalanthar-embed-url {
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.04em;
+    color: var(--charcoal); opacity: 0.5; flex: 1;
+  }
+  .jalanthar-embed-link {
+    font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--forest); text-decoration: none;
+    border-bottom: 1px solid currentColor; padding-bottom: 1px;
+  }
+  .jalanthar-embed-link:hover { color: var(--rust); }
+  .jalanthar-embed-frame {
+    width: 100%; height: 640px; border: none; display: block;
+  }
+  .jalanthar-stack {
+    display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px;
+  }
+  .jalanthar-stack span {
+    font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--forest);
+    border: 1px solid rgba(39,79,16,.35); padding: 5px 12px; border-radius: 100px;
+  }
+</style>
 </head>
 <body data-section="work">
 
@@ -43,60 +86,42 @@
         </div>
         <div class="project-header-text">
           <span class="project-tag is-personal">Personal project</span>
-          <p>Three years of running a homebrew D&D campaign — writing the world, managing a cast of NPCs and factions, planning sessions weeks in advance, and eventually building a custom web app to track all of it. This is what sustained creative work actually looks like.</p>
+          <p>Three years of running a homebrew D&D campaign set in the city of Jalanthar — writing the world, managing a cast of 60+ NPCs, planning sessions weeks in advance, and building a custom web app to track all of it. What started as notes in a notebook eventually needed its own infrastructure.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="accordion-section">
+  <section style="padding-bottom: 100px;">
     <div class="wrap">
 
-      <div class="accordion-item">
-        <button class="accordion-trigger" onclick="toggleAccordion(this)">
-          <span class="accordion-num">01</span>
-          <span class="accordion-title">The Campaign</span>
-          <span class="accordion-icon">+</span>
-        </button>
-        <div class="accordion-panel">
-          <div class="accordion-panel-inner">
-            <p>Jalanthar is a fictional city I built from scratch and ran as a long-form D&D campaign over three years and counting. Every session required planning — not just the next encounter, but how it fit into a larger arc, how player decisions would ripple forward, and how the world would continue to feel alive whether or not the players ever went looking in a particular direction.</p>
-            <p>That kind of work builds a specific skill set: holding a lot of interdependent threads in your head, knowing which details matter and which ones can stay loose, communicating complex systems to a group of people with different levels of engagement. It's organizational thinking dressed up as storytelling.</p>
-            <p>The campaign has run 40+ sessions, generated a cast of 60+ named NPCs, and produced several hundred pages of notes, lore, and narrative documentation — none of which any player will ever see directly, but all of which makes the world feel like it exists beyond the edges of the map.</p>
-          </div>
-        </div>
+      <p style="font-size: 14.5px; line-height: 1.8; color: var(--charcoal); opacity: 0.8; max-width: 680px;">The app — the Jalanthar Player's Chronicle — is a React + Firebase tool I built to replace 200 pages of scattered notes. It gives players an interactive map of the city, a browsable NPC relationship graph, and a building catalog with in-world inventory. On the DM side, I control what's visible: NPCs with <code style="font-size:12px; background:rgba(39,79,16,.08); padding:2px 6px; border-radius:3px;">visible: false</code> are blocked at the Firestore security rules level, not just hidden in the UI. It's live and playable below.</p>
+
+      <div class="jalanthar-stack">
+        <span>React + Vite</span>
+        <span>Firebase / Firestore</span>
+        <span>Tailwind CSS</span>
+        <span>React Flow</span>
+        <span>GitHub Actions</span>
+        <span>AI Price Scanner</span>
+        <span>3 Years Running</span>
       </div>
 
-      <div class="accordion-item">
-        <button class="accordion-trigger" onclick="toggleAccordion(this)">
-          <span class="accordion-num">02</span>
-          <span class="accordion-title">Writing &amp; World-Building</span>
-          <span class="accordion-icon">+</span>
-        </button>
-        <div class="accordion-panel">
-          <div class="accordion-panel-inner">
-            <p>The writing side of this is its own discipline. Good D&D writing has to operate on two levels: detailed enough to feel real, sparse enough to let the players complete it themselves. An NPC needs a voice that's immediately recognizable the second time a player meets them. A faction's motivations need to be internally consistent even when they're working against each other. Backstory needs to exist so that a question you never planned for still has an answer.</p>
-            <p>Over three years, I've written tavern menus and city histories, villain monologues and merchant dialogue, political intrigue and mythological lore. The constraint that sharpens all of it: everything eventually gets tested live, in real time, in front of an audience with full license to go sideways.</p>
+      <div class="jalanthar-embed-wrap">
+        <div class="jalanthar-embed-bar">
+          <div class="jalanthar-embed-dots">
+            <span></span><span></span><span></span>
           </div>
+          <div class="jalanthar-embed-url">santi-nino.github.io/Jalanthar/</div>
+          <a class="jalanthar-embed-link" href="https://santi-nino.github.io/Jalanthar/" target="_blank" rel="noopener">Open →</a>
         </div>
-      </div>
-
-      <div class="accordion-item">
-        <button class="accordion-trigger" onclick="toggleAccordion(this)">
-          <span class="accordion-num">03</span>
-          <span class="accordion-title">The Tool</span>
-          <span class="accordion-icon">+</span>
-        </button>
-        <div class="accordion-panel">
-          <div class="accordion-panel-inner">
-            <p>About a year in, the campaign got complex enough that notes stopped being enough. I built a custom web app — the Jalanthar Player's Chronicle — to manage it. It runs as a deployed React + Firebase app with a DM-controlled backend, player-facing views with visibility controls, and an AI-powered price list scanner for in-world inventory.</p>
-            <p>Features include an interactive pan/zoom city map with custom building markers, a full NPC database with relationship graphs showing faction connections, a building catalog with type-specific inventory and service systems, and a DM login panel where I can hide or reveal information to players in real time. It's deployed to GitHub Pages via CI/CD and backed by Firestore with proper security rules — unrevealed NPCs are blocked at the database level, not just hidden in the UI.</p>
-            <p>I built it because I needed it, not because it was impressive. But it reflects how I tend to approach complex, long-running projects: find the organizational friction, remove it systematically, and build something that keeps the creative work moving.</p>
-            <div style="margin-top: 20px;">
-              <a class="article-link" href="https://github.com/ageofdust/jalanthar-site" target="_blank" rel="noopener">View on GitHub →</a>
-            </div>
-          </div>
-        </div>
+        <iframe
+          class="jalanthar-embed-frame"
+          src="https://santi-nino.github.io/Jalanthar/"
+          title="Jalanthar Player's Chronicle — live app"
+          loading="lazy"
+          sandbox="allow-scripts allow-same-origin allow-forms allow-popups">
+        </iframe>
       </div>
 
     </div>

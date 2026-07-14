@@ -204,6 +204,7 @@
     position: relative;
     z-index: 5;
     max-width: 920px;
+    width: 100%;
   }
 
   .hero h1 {
