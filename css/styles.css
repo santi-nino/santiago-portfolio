@@ -1109,6 +1109,10 @@
     .mobile-menu { display: flex; }
     .hero { min-height: auto; padding: 20px 0 60px; }
     .hero-canvas { min-height: auto; }
+    /* Let headline reflow naturally at narrow widths — forced 3-line
+       breaks leave short lines ("grow like") isolated with empty space */
+    .hero h1 .line { display: inline; }
+    .hero h1 .line::after { content: ' '; }
     .hero-sub-row { flex-direction: column; align-items: flex-start; }
     .hero-meta { flex-direction: row; text-align: left; gap: 32px; }
     .cta-row { flex-direction: column; align-items: flex-start; gap: 20px; }

@@ -14,6 +14,50 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../css/styles.css">
+<style>
+  .bff-body { padding: 56px 0 100px; }
+  .bff-lead {
+    font-size: 20px; line-height: 1.65; color: var(--charcoal);
+    max-width: 720px; margin-bottom: 40px;
+    font-family: var(--font-display); font-weight: 400; font-style: italic;
+  }
+  .bff-text {
+    font-family: var(--font-mono); font-size: 13.5px; line-height: 1.85;
+    color: var(--charcoal); opacity: 0.8; max-width: 640px; margin-bottom: 22px;
+  }
+  .bff-tags { display: flex; flex-wrap: wrap; gap: 10px; margin: 36px 0 52px; }
+  .bff-tag {
+    font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--forest);
+    border: 1px solid rgba(39,79,16,.35); padding: 6px 14px; border-radius: 100px;
+  }
+  .bff-photos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 4px;
+    margin-top: 52px;
+  }
+  .bff-photo-main {
+    grid-row: span 2;
+    overflow: hidden;
+    border-radius: 4px;
+  }
+  .bff-photo-main img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .bff-photo { overflow: hidden; border-radius: 4px; }
+  .bff-photo img { width: 100%; height: 220px; object-fit: cover; display: block; }
+  .bff-photo img:hover { opacity: 0.92; transition: opacity .2s; }
+  .bff-caption {
+    font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--charcoal); opacity: 0.45;
+    margin-top: 12px;
+  }
+  @media (max-width: 640px) {
+    .bff-photos { grid-template-columns: 1fr; }
+    .bff-photo-main { grid-row: span 1; }
+    .bff-photo-main img { height: 280px; }
+  }
+</style>
 </head>
 <body data-section="work">
 
@@ -43,70 +87,46 @@
         </div>
         <div class="project-header-text">
           <span class="project-tag">Client work</span>
-          <p>I joined the Brooklyn Film Festival team as a programming assistant for the narrative feature program — one of the largest competitive film festivals in the US. My job was to make the space work for both filmmakers and audiences: coordinating VIP talent, running screening logistics, and hosting the post-film Q&As that turned a screening into a conversation.</p>
+          <p>Programming assistant and on-stage MC for the narrative feature program at one of the largest competitive film festivals in the US — coordinating VIP talent, running screening logistics, and moderating live post-film Q&As.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="accordion-section">
+  <section class="bff-body">
     <div class="wrap">
 
-      <div class="accordion-item">
-        <button class="accordion-trigger" onclick="toggleAccordion(this)">
-          <span class="accordion-num">01</span>
-          <span class="accordion-title">The Role</span>
-          <span class="accordion-icon">+</span>
-        </button>
-        <div class="accordion-panel">
-          <div class="accordion-panel-inner">
-            <p>The work spanned two sides of the same moment: the logistical work that happens before the lights go down, and the live performance that happens after they come back up. Keeping a film festival on schedule while making it feel effortless is its own discipline — and the Q&A format, where you're moderating an unscripted conversation between filmmakers and a live audience minutes after they watched their own film projected, requires a different kind of presence than anything that happens on a stage.</p>
-            <p>The skills it built — reading a room, briefing talent under time pressure, keeping energy alive when a conversation stalls — transfer directly into every content and brand role I've held since.</p>
-          </div>
-        </div>
+      <p class="bff-lead">Film festivals look effortless from the audience. They aren't.</p>
+
+      <p class="bff-text">My role at BFF centered on the narrative feature program — the part of the festival where independent directors show up from across the country and need someone to make them feel like the room is ready for them before they walk in front of an audience that just spent 90 minutes with their film.</p>
+
+      <p class="bff-text">That meant being the first face a filmmaker saw when they arrived and the last voice the audience heard before they left. VIP talent coordination and logistics before the lights went down. On-stage moderation and Q&A hosting after they came back up. Every screening was a different film, a different director, a different energy in the room — the job was to read all of it and keep the conversation alive.</p>
+
+      <p class="bff-text">A live, unscripted Q&A after a feature film is its own discipline. There's no second take if a question goes sideways or the conversation stalls. The skills it builds — reading a room, briefing talent quickly, keeping energy high — are the same ones that show up in every content and brand role I've held since. You just don't always see them on a résumé.</p>
+
+      <div class="bff-tags">
+        <span class="bff-tag">MC &amp; Moderation</span>
+        <span class="bff-tag">VIP Coordination</span>
+        <span class="bff-tag">Screening Logistics</span>
+        <span class="bff-tag">Live Event</span>
+        <span class="bff-tag">Film Programming</span>
       </div>
 
-      <div class="accordion-item">
-        <button class="accordion-trigger" onclick="toggleAccordion(this)">
-          <span class="accordion-num">02</span>
-          <span class="accordion-title">Responsibilities</span>
-          <span class="accordion-icon">+</span>
-        </button>
-        <div class="accordion-panel">
-          <div class="accordion-panel-inner">
-            <p><strong>MC &amp; Q&A Moderation</strong> — Hosted post-screening Q&As for the narrative feature program, introducing filmmakers, framing the conversation for a live audience, and moderating discussion between directors, writers, and the crowd. Every screening was a different format and a different energy level.</p>
-            <p><strong>VIP Talent Coordination</strong> — Served as first point of contact for filmmakers and talent arriving for their screenings. Managed logistics, briefed them on format, and made sure they felt prepared to step in front of an audience right after watching their own work projected on a full-size screen.</p>
-            <p><strong>Screening &amp; Event Operations</strong> — Coordinated the operational side of each screening: theater setup, run-of-show timing, audience management, and the handoff between film and conversation. When something breaks in a live format, you fix it without the audience noticing.</p>
-          </div>
+      <div class="bff-photos">
+        <div class="bff-photo-main">
+          <img src="img/qa-4.jpg" alt="Full-house Q&A at Brooklyn Film Festival" loading="lazy">
+        </div>
+        <div class="bff-photo">
+          <img src="img/qa-1.jpg" alt="Post-screening Q&A with filmmakers" loading="lazy">
+        </div>
+        <div class="bff-photo">
+          <img src="img/qa-2.jpg" alt="Panel moderation, narrative features" loading="lazy">
+        </div>
+        <div class="bff-photo" style="grid-column: 2;">
+          <img src="img/qa-3.jpg" alt="Independent filmmakers in Q&A" loading="lazy">
         </div>
       </div>
-
-      <div class="accordion-item">
-        <button class="accordion-trigger" onclick="toggleAccordion(this)">
-          <span class="accordion-num">03</span>
-          <span class="accordion-title">From the Festival Floor</span>
-          <span class="accordion-icon">+</span>
-        </button>
-        <div class="accordion-panel">
-          <div class="accordion-panel-inner">
-            <p>Post-screening Q&As with narrative feature filmmakers — behind the mic, in the room.</p>
-            <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:20px;">
-              <div style="grid-row:span 2; overflow:hidden; border-radius:4px;">
-                <img src="img/qa-4.jpg" alt="Full-house Q&A — Brooklyn Film Festival narrative feature program" style="width:100%; height:100%; object-fit:cover; display:block;">
-              </div>
-              <div style="overflow:hidden; border-radius:4px;">
-                <img src="img/qa-1.jpg" alt="Filmmaker Q&A post-screening" style="width:100%; height:220px; object-fit:cover; display:block;">
-              </div>
-              <div style="overflow:hidden; border-radius:4px;">
-                <img src="img/qa-2.jpg" alt="Panel moderation" style="width:100%; height:220px; object-fit:cover; display:block;">
-              </div>
-              <div style="overflow:hidden; border-radius:4px; grid-column:2;">
-                <img src="img/qa-3.jpg" alt="Young filmmakers post-screening discussion" style="width:100%; height:220px; object-fit:cover; display:block;">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <p class="bff-caption">Post-screening Q&As — narrative feature program, Brooklyn Film Festival</p>
 
     </div>
   </section>
